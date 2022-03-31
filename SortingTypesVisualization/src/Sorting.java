@@ -8,11 +8,14 @@ import java.time.*;
 
 public class Sorting 
 {
+	
 	Display sprite = new Display();
 	
+	//A desorting function with speaks by itself.
 	public void desorting()
 	{
-		try{Thread.sleep(2000);}
+		//A method making time delay.
+		try{Thread.sleep(4000);}
 		catch(InterruptedException ex){Thread.currentThread().interrupt();}
 		for(int i=0;i<400;i++)
 		{
@@ -23,9 +26,9 @@ public class Sorting
 			sprite.setHeight(i, rand.nextInt(550)+20);
 			sprite.setColor(i, Color.BLACK);
 		}
-			
 	}
 	
+	//Sorting function.
 	public void bubbleSort()
 	{
 		for(int i=0;i<400;i++)
@@ -34,6 +37,7 @@ public class Sorting
 				{
 					sprite.setColor(j, Color.RED);
 					sprite.setColor(j+1, Color.RED);
+					//Time delay.
 					try{Thread.sleep(1);}
 					catch(InterruptedException ex){Thread.currentThread().interrupt();}
 					
@@ -47,16 +51,9 @@ public class Sorting
 					sprite.setColor(j+1, Color.BLACK);
 				}
 	}
-	public void quickSort()
-	{
-		for(int i=0;i<400;i++)
-		{
-			
-		}
-	}
+
 	
-	
-	
+	//Printing height of sprites.
 	public void printList()
 	{
 		for(int i=0;i<400;i++)
