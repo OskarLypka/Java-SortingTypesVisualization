@@ -13,7 +13,7 @@ public class Display implements ActionListener
 	{
 		
 		//Declaring them.
-		for(int i=0;i<400;i++)
+		for(int i=0;i<panels.length;i++)
 		{
 			Random rand = new Random();
 			panels[i]= new JPanel();
@@ -29,7 +29,7 @@ public class Display implements ActionListener
 		frame.setVisible(true);
 		
 		//Printing.
-		for(int i=0;i<400;i++)
+		for(int i=0;i<panels.length;i++)
 		{
 			frame.add(panels[i]);
 		}
@@ -40,4 +40,5 @@ public class Display implements ActionListener
 	public int getHeight(int i){return panels[i].getHeight();}
 	public void setHeight(int i, int height){panels[i].setSize(2, height);}
 	public void setColor(int i, Color color){panels[i].setBackground(color);}
+	public int getTableLength() {return panels.length;}
 }
