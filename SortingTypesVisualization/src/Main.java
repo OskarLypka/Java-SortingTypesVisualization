@@ -12,8 +12,10 @@ public class Main
 	{
 		Sorting sort = new Sorting();
 
-		
+		sort.quickSort(0,399);
+		sort.desorting();
 		sort.bubbleSort();
 		sort.desorting();
+		
 	}
 }
